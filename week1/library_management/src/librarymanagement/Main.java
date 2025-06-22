@@ -1,0 +1,33 @@
+package librarymanagement;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Main {
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        Book[] books = {
+	            new Book(101, "The Alchemist", "Paulo Coelho"),
+	            new Book(102, "1984", "George Orwell"),
+	            new Book(103, "To Kill a Mockingbird", "Harper Lee"),
+	            new Book(104, "Moby Dick", "Herman Melville")
+	        };
+
+	        System.out.print("Enter book title to search: ");
+	        String searchTitle = scanner.nextLine();
+
+	        Book linearResult = BookSearch.linearSearch(books, searchTitle);
+	        System.out.println("\nLinear Search Result:");
+	        System.out.println(linearResult != null ? linearResult : "Book not found");
+
+	        Arrays.sort(books, Comparator.comparing(b -> b.title.toLowerCase()));
+
+	        Book binaryResult = BookSearch.binarySearch(books, searchTitle);
+	        System.out.println("\nBinary Search Result:");
+	        System.out.println(binaryResult != null ? binaryResult : "Book not found");
+
+	        scanner.close();
+	    }
+}
