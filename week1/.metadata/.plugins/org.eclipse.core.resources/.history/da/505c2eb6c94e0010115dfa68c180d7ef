@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module payment_processor {
-}

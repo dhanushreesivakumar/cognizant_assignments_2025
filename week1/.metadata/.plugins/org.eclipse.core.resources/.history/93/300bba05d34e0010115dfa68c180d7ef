@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module home_automate {
-}

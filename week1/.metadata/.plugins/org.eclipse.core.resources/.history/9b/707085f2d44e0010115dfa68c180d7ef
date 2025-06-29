@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module customer_serv {
-}
